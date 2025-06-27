@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/vazarkevych/growthbook-python/compare/v1.3.1...v1.4.0) (2025-06-27)
+
+
+### Features
+
+* add support for ruleId output in eval_feature ([#14](https://github.com/vazarkevych/growthbook-python/issues/14)) ([4f48e40](https://github.com/vazarkevych/growthbook-python/commit/4f48e405009d70d98e74b3c7832d7f753eb47be4))
+* tracking plugins ([fde4d42](https://github.com/vazarkevych/growthbook-python/commit/fde4d4283343758ca1ec034052b8bdb2c0639b22))
+
+
+### Bug Fixes
+
+* Tracking linked experiments ([becee2c](https://github.com/vazarkevych/growthbook-python/commit/becee2c7b306fd0e0f450c3a5676de77e39c9410))
+* tracking plugins and Caching ([ef6529a](https://github.com/vazarkevych/growthbook-python/commit/ef6529a113f5c1b074a9b700232d2e3343a6b152))
+
 ## [1.3.1](https://github.com/growthbook/growthbook-python/compare/v1.3.0...v1.3.1) (2025-06-13)
 
 
