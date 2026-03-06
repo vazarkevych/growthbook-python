@@ -18,5 +18,5 @@ from .plugins import (
 )
 
 # x-release-please-start-version
-__version__ = "2.1.5"
+__version__ = "3.0.0"
 # x-release-please-end
