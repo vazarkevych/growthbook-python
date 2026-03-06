@@ -1,5 +1,44 @@
 # Changelog
 
+## [3.0.0](https://github.com/vazarkevych/growthbook-python/compare/v2.1.5...v3.0.0) (2026-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Fixes for Async wrapper execution and other enhancements
+
+### Features
+
+* $regexi - Case insensitive regex support  ([b9fce8a](https://github.com/vazarkevych/growthbook-python/commit/b9fce8ab2e7c91e38a0f2cb7b1d2446d564e650b))
+* add support for ruleId output in eval_feature ([#14](https://github.com/vazarkevych/growthbook-python/issues/14)) ([4f48e40](https://github.com/vazarkevych/growthbook-python/commit/4f48e405009d70d98e74b3c7832d7f753eb47be4))
+* tracking plugins ([fde4d42](https://github.com/vazarkevych/growthbook-python/commit/fde4d4283343758ca1ec034052b8bdb2c0639b22))
+* Tracking Plugins Compatibility with Async & Sync Clients ([a54c06d](https://github.com/vazarkevych/growthbook-python/commit/a54c06d22726a3702bacbf895165ef5bff02061b))
+
+
+### Bug Fixes
+
+* Add FeatureUsageCallback ([83359a0](https://github.com/vazarkevych/growthbook-python/commit/83359a02cd00d645ba7c12d8ffea2a3ce6077411))
+* Add gzip encoding header to features call - Merge pull request [#83](https://github.com/vazarkevych/growthbook-python/issues/83) from growthbook/feat/etag-cache ([82bdee2](https://github.com/vazarkevych/growthbook-python/commit/82bdee29663b07e2733a841536634ca680e9b276))
+* Add optional timeout for PoolManager ([#91](https://github.com/vazarkevych/growthbook-python/issues/91)) ([2fe21f6](https://github.com/vazarkevych/growthbook-python/commit/2fe21f692189d7a37712d445b4545571ff2d3039))
+* add timeout to SSE client ([ff6c2a7](https://github.com/vazarkevych/growthbook-python/commit/ff6c2a77269d691da984ef2e6b88405cf465caec))
+* Add user agent suffix optional prop - Merge pull request [#87](https://github.com/vazarkevych/growthbook-python/issues/87) from growthbook/fix/fetch-metadata ([e786dd8](https://github.com/vazarkevych/growthbook-python/commit/e786dd815f9a5608cbfb0681eba55b4cf0e94298))
+* Background Refresh task for Features ([bda8050](https://github.com/vazarkevych/growthbook-python/commit/bda8050c7c1b72cf4589fd64e9bca884dcbb629c))
+* bug fixes and tracking enhancements ([6d3638b](https://github.com/vazarkevych/growthbook-python/commit/6d3638bf5e6c57c8882e4de35bc5e7ab5eafa5a5))
+* Bug fixes and tracking enhancements ([a9b34a6](https://github.com/vazarkevych/growthbook-python/commit/a9b34a655d818758d6d622fea83945abd4e079f7))
+* Case insensitive membership operators - Merge pull request [#96](https://github.com/vazarkevych/growthbook-python/issues/96) from growthbook/feat/case-insensitive-regex ([0e26f7d](https://github.com/vazarkevych/growthbook-python/commit/0e26f7d55e2b4b5908a9e3dd0921c1ea1fa49f97))
+* Disabled features not being removed from cache ([#93](https://github.com/vazarkevych/growthbook-python/issues/93)) ([eac9717](https://github.com/vazarkevych/growthbook-python/commit/eac971782f7776ff4261cc4ef9b7894b5735eb9d))
+* Fixes for Async wrapper execution and other enhancements ([e6a0eaf](https://github.com/vazarkevych/growthbook-python/commit/e6a0eaff7dcc391819ad92eeb94a4fd3aac7bdda))
+* Fixes for graceful shutdown ([ab158ad](https://github.com/vazarkevych/growthbook-python/commit/ab158ad7a748bd7380c9ad0fda46cc91acc3b473))
+* Fixes for process hanging and shutdown errors - Merge pull request [#103](https://github.com/vazarkevych/growthbook-python/issues/103) from growthbook/pr102 ([c89a385](https://github.com/vazarkevych/growthbook-python/commit/c89a385b0cd0b0c4a776b7b81fc1ab3d27e40738))
+* Handle ETags natively for both sync & async clients - Merge pull request [#81](https://github.com/vazarkevych/growthbook-python/issues/81) from growthbook/feat/etag-cache ([95b06c3](https://github.com/vazarkevych/growthbook-python/commit/95b06c312428d7af1b81b2cbb29ddf6421f05ef7))
+* Keep the Socket open with a configurable connection timeout ([f4783fc](https://github.com/vazarkevych/growthbook-python/commit/f4783fc451fdf7544b764239e71d89895ba8096c))
+* parsing data for SSE in GrowthbookClient ([d390223](https://github.com/vazarkevych/growthbook-python/commit/d390223c0035d65d91a930391d4731321f4c2f15))
+* prevent SSE thread from blocking process exit and suppressing shutdown errors ([bddfb82](https://github.com/vazarkevych/growthbook-python/commit/bddfb82fce6284d4edf48b6135b51b362f82eab9))
+* Supporting Dict Subclasses in Evaluation - Merge pull request [#99](https://github.com/vazarkevych/growthbook-python/issues/99) from growthbook/feat/isInstanceTypeCheck ([8ed4d4e](https://github.com/vazarkevych/growthbook-python/commit/8ed4d4e1aaf5b79408d60b16f856d66146600f91))
+* Tracking linked experiments ([becee2c](https://github.com/vazarkevych/growthbook-python/commit/becee2c7b306fd0e0f450c3a5676de77e39c9410))
+* tracking plugins and Caching ([ef6529a](https://github.com/vazarkevych/growthbook-python/commit/ef6529a113f5c1b074a9b700232d2e3343a6b152))
+* Type checks & Other enhancements - Merge pull request [#77](https://github.com/vazarkevych/growthbook-python/issues/77) from growthbook/feat/enhancements ([ea1567a](https://github.com/vazarkevych/growthbook-python/commit/ea1567a97284d61587493dd1a15f3105d06a67bb))
+
 ## [2.1.5](https://github.com/growthbook/growthbook-python/compare/v2.1.4...v2.1.5) (2026-03-06)
 
 
