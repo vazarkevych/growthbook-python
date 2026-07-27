@@ -1134,6 +1134,15 @@ class GrowthBook(object):
             # eval: every set_attributes call hits the network.
             self.load_features()
 
+    def update_attributes(self, attributes: dict) -> None:
+        """Shallow-merge the given attributes into the existing ones (parity
+        with the JS SDK's updateAttributes): new keys are added, existing keys
+        are overwritten, untouched keys are preserved. Unlike set_attributes,
+        this does not replace the whole map. Passing None (or an empty dict) is
+        a no-op. Sticky buckets and, in remote-eval mode, the feature refetch
+        are handled by delegating to set_attributes."""
+        self.set_attributes({**self._attributes, **(attributes or {})})
+
     def set_forced_variations(self, forced_variations: Dict[str, Any]) -> None:
         self._forcedVariations = forced_variations or {}
         if self._user_ctx is not None:

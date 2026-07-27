@@ -211,6 +211,53 @@ def test_stickyBucket(stickyBucket_data):
     gb.destroy()
 
 
+def test_update_attributes_merges_into_existing():
+    gb = GrowthBook(attributes={"id": "1", "country": "US"})
+
+    gb.update_attributes({"plan": "pro"})
+
+    assert gb.get_attributes() == {"id": "1", "country": "US", "plan": "pro"}
+    gb.destroy()
+
+
+def test_update_attributes_overwrites_and_preserves():
+    gb = GrowthBook(attributes={"id": "1", "country": "US"})
+
+    gb.update_attributes({"country": "FR"})
+
+    assert gb.get_attributes() == {"id": "1", "country": "FR"}
+    gb.destroy()
+
+
+def test_update_attributes_merges_not_replaces():
+    # Unlike set_attributes, update_attributes keeps untouched keys.
+    gb = GrowthBook(attributes={"plan": "pro"})
+
+    gb.update_attributes({"id": "2"})
+
+    assert gb.get_attributes() == {"plan": "pro", "id": "2"}
+    gb.destroy()
+
+
+def test_update_attributes_none_is_noop():
+    gb = GrowthBook(attributes={"id": "1", "country": "US"})
+
+    gb.update_attributes(None)
+
+    assert gb.get_attributes() == {"id": "1", "country": "US"}
+    gb.destroy()
+
+
+def test_update_attributes_stores_none_value():
+    # A None value is stored, not treated as key removal (parity with Ruby/C#).
+    gb = GrowthBook(attributes={"id": "1"})
+
+    gb.update_attributes({"plan": None})
+
+    assert gb.get_attributes() == {"id": "1", "plan": None}
+    gb.destroy()
+
+
 def getTrackingMock(gb: GrowthBook):
     calls = []
 
